@@ -1,0 +1,15 @@
+.carousel {
+  padding: 1rem;
+
+  h2 {
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.swiper-slide {
+  width: auto;
+}

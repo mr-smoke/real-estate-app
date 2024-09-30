@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 import Featured from "./Featured";
 import Hero from "./Hero";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <main>
       <Hero />
       <Featured />
+      <Carousel />
     </main>
   );
 };
