@@ -14,6 +14,7 @@ const Carousel = () => {
         slidesPerView="auto"
         pagination={{ clickable: true }}
       >
+        <p>Try</p>
         <SwiperSlide>
           <Card />
         </SwiperSlide>
