@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Buy from "./pages/Buy";
+import Rent from "./pages/Rent";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/buy" element={<Buy />} />
+          <Route path="/rent" element={<Rent />} />
         </Routes>
         <Footer />
       </ApolloProvider>
