@@ -539,7 +539,7 @@ export interface ApiHouseHouse extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
-    Bathroom: Schema.Attribute.Integer;
+    Bathrooms: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

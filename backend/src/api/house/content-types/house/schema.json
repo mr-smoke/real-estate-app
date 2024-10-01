@@ -59,7 +59,7 @@
       "target": "api::category.category",
       "mappedBy": "houses"
     },
-    "Bathroom": {
+    "Bathrooms": {
       "type": "integer"
     }
   }

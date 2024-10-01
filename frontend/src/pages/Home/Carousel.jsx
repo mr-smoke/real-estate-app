@@ -3,8 +3,12 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
+import { useQuery } from "@apollo/client";
+import { GET_HOUSES_BUY } from "../../graphql/queries/house.query";
 
 const Carousel = () => {
+  const { loading, error, data } = useQuery(GET_HOUSES_BUY);
+  console.log(data);
   return (
     <section className="carousel">
       <h2>Featured Properties</h2>
@@ -14,18 +18,13 @@ const Carousel = () => {
         slidesPerView="auto"
         pagination={{ clickable: true }}
       >
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: ${error.message}</p>}
+        {data?.houses.map((house) => (
+          <SwiperSlide key={house.id}>
+            <Card house={house} />
+          </SwiperSlide>
+        ))}
         <div style={{ marginTop: "70px" }}></div>
       </Swiper>
     </section>

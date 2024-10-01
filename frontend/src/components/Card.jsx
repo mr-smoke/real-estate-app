@@ -5,7 +5,7 @@ import {
   MdMeetingRoom,
 } from "react-icons/md";
 
-const Card = () => {
+const Card = ({ house }) => {
   return (
     <div className="card">
       <div className="card__image">
@@ -13,28 +13,28 @@ const Card = () => {
         <span>Buy</span>
       </div>
       <div className="card__content">
-        <h3>Title</h3>
-        <p>content</p>
+        <h3>{house.Neighbourhood}</h3>
+        <p>{house.Street}</p>
         <div className="card__details">
           <span>
             <MdMeetingRoom size={20} />
-            Rooms: 9
+            Rooms: {house.Rooms}
           </span>
           <span>
             <MdBathtub size={20} />
-            Bathrooms: 2
+            Bathrooms: {house.Bathrooms}
           </span>
           <span>
             <MdKingBed size={20} />
-            Bedrooms: 3
+            Bedrooms: {house.Bedrooms}
           </span>
           <span>
             <MdLocationOn size={20} />
-            NY
+            {house.location.Location}
           </span>
         </div>
         <div className="card__footer">
-          <span>$ Price</span>
+          <span>${house.Price}</span>
           <button>View</button>
         </div>
       </div>
