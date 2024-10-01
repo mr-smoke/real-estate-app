@@ -10,7 +10,7 @@ const Card = ({ house }) => {
     <div className="card">
       <div className="card__image">
         <img src="/building.jpg" alt="Card" />
-        <span>Buy</span>
+        <span>{house.categories[0].Category}</span>
       </div>
       <div className="card__content">
         <h3>{house.Neighbourhood}</h3>

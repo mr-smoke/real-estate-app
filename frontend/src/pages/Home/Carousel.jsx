@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import { useQuery } from "@apollo/client";
-import { GET_HOUSES_BUY } from "../../graphql/queries/house.query";
+import { GET_HOUSES } from "../../graphql/queries/house.query";
 
 const Carousel = () => {
-  const { loading, error, data } = useQuery(GET_HOUSES_BUY);
+  const { loading, error, data } = useQuery(GET_HOUSES);
   console.log(data);
   return (
     <section className="carousel">
