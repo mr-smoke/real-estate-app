@@ -519,6 +519,7 @@ export interface ApiHouseHouse extends Struct.CollectionTypeSchema {
     singularName: 'house';
     pluralName: 'houses';
     displayName: 'House';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -528,9 +529,7 @@ export interface ApiHouseHouse extends Struct.CollectionTypeSchema {
     Rooms: Schema.Attribute.Integer;
     Bedrooms: Schema.Attribute.Integer;
     Short_Adress: Schema.Attribute.String;
-    Preciew_Image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    Img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Price: Schema.Attribute.Decimal;
     Rent: Schema.Attribute.Decimal;
     Description: Schema.Attribute.Blocks;
@@ -540,6 +539,7 @@ export interface ApiHouseHouse extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
+    Bathroom: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

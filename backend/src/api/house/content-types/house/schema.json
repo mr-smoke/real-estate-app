@@ -4,7 +4,8 @@
   "info": {
     "singularName": "house",
     "pluralName": "houses",
-    "displayName": "House"
+    "displayName": "House",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,15 +24,16 @@
     "Short_Adress": {
       "type": "string"
     },
-    "Preciew_Image": {
+    "Img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Price": {
       "type": "decimal"
@@ -56,6 +58,9 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "houses"
+    },
+    "Bathroom": {
+      "type": "integer"
     }
   }
 }
