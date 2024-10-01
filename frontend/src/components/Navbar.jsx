@@ -39,22 +39,22 @@ const Navbar = () => {
                 Home
               </li>
             </a>
-            <a href="/about">
+            <a href="/buy">
               <li
                 className={`navbar__list-item ${
-                  pathname === "/about" ? "navbar__list-item_active" : ""
+                  pathname === "/buy" ? "navbar__list-item_active" : ""
                 }`}
               >
-                About
+                Buy Houses
               </li>
             </a>
-            <a href="/services">
+            <a href="/rent">
               <li
                 className={`navbar__list-item ${
-                  pathname === "/services" ? "navbar__list-item_active" : ""
+                  pathname === "/rent" ? "navbar__list-item_active" : ""
                 }`}
               >
-                Services
+                Rent Houses
               </li>
             </a>
             <a href="/contact">

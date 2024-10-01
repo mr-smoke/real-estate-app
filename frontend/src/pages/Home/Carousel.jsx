@@ -8,7 +8,6 @@ import { GET_HOUSES } from "../../graphql/queries/house.query";
 
 const Carousel = () => {
   const { loading, error, data } = useQuery(GET_HOUSES);
-  console.log(data);
   return (
     <section className="carousel">
       <h2>Featured Properties</h2>
