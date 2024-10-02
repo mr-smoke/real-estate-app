@@ -4,9 +4,11 @@
   border: 1px solid #ccc;
   padding: 1rem;
   width: 375px;
+  height: 575px;
 
   &__image {
     position: relative;
+    flex: 1;
 
     img {
       width: 100%;

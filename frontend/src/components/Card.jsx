@@ -6,10 +6,11 @@ import {
 } from "react-icons/md";
 
 const Card = ({ house }) => {
+  console.log(house);
   return (
     <div className="card">
       <div className="card__image">
-        <img src="/building.jpg" alt="Card" />
+        <img src={`http://localhost:1337${house.Img?.url}`} alt="Card" />
         {house.categories && <span>{house.categories[0].Category}</span>}
       </div>
       <div className="card__content">
@@ -35,7 +36,9 @@ const Card = ({ house }) => {
         </div>
         <div className="card__footer">
           <span>${house.Price}</span>
-          <button>View</button>
+          <a href={`/house/${house.documentId}`}>
+            <button>View</button>
+          </a>
         </div>
       </div>
     </div>

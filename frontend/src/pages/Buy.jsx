@@ -4,9 +4,10 @@ import Card from "../components/Card";
 
 const Buy = () => {
   const { data, loading, error } = useQuery(GET_HOUSES_BUY);
+
   return (
     <main>
-      <section className="buy">
+      <section className="cards-container">
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
         {data && (

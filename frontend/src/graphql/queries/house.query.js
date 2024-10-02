@@ -14,7 +14,11 @@ export const GET_HOUSES = gql`
       categories {
         Category
       }
+      Img {
+        url
+      }
       Price
+      documentId
     }
   }
 `;
@@ -30,7 +34,11 @@ export const GET_HOUSES_BUY = gql`
       location {
         Location
       }
+      Img {
+        url
+      }
       Price
+      documentId
     }
   }
 `;
@@ -46,7 +54,34 @@ export const GET_HOUSES_RENT = gql`
       location {
         Location
       }
+      Img {
+        url
+      }
       Price
+      documentId
+    }
+  }
+`;
+
+export const GET_HOUSE = gql`
+  query GetHouse($documentId: ID!) {
+    house(documentId: $documentId) {
+      Neighbourhood
+      Street
+      Rooms
+      Bathrooms
+      Bedrooms
+      location {
+        Location
+      }
+      categories {
+        Category
+      }
+      Img {
+        url
+      }
+      Price
+      documentId
     }
   }
 `;

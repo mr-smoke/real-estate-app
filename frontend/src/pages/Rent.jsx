@@ -1,5 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { GET_HOUSES_RENT } from "../graphql/queries/house.query";
+import Card from "../components/Card";
 
 const Rent = () => {
   const { loading, error, data } = useQuery(GET_HOUSES_RENT);
