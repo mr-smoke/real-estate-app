@@ -6,7 +6,6 @@ import {
 } from "react-icons/md";
 
 const Card = ({ house }) => {
-  console.log(house);
   return (
     <div className="card">
       <div className="card__image">

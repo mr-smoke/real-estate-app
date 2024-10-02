@@ -20,7 +20,7 @@ const Carousel = () => {
         {loading && <p>Loading...</p>}
         {error && <p>Error: ${error.message}</p>}
         {data?.houses.map((house) => (
-          <SwiperSlide key={house.id}>
+          <SwiperSlide key={house.documentId}>
             <Card house={house} />
           </SwiperSlide>
         ))}

@@ -85,3 +85,31 @@ export const GET_HOUSE = gql`
     }
   }
 `;
+
+export const GET_HOUSES_BY_SEARCH = gql`
+  query GetHousesBySearch($location: String!, $price: Float!) {
+    houses(
+      filters: {
+        location: { Location: { contains: $location } }
+        Price: { lt: $price }
+      }
+    ) {
+      Neighbourhood
+      Street
+      Rooms
+      Bathrooms
+      Bedrooms
+      location {
+        Location
+      }
+      categories {
+        Category
+      }
+      Img {
+        url
+      }
+      Price
+      documentId
+    }
+  }
+`;
