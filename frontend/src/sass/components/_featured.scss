@@ -45,6 +45,28 @@
         color: #333;
       }
 
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 15%;
+          height: 100%;
+          background-color: #88888880;
+          transition: width 0.3s;
+          position: absolute;
+        }
+
+        &:hover::after {
+          width: 40%;
+        }
+      }
+
       @media screen and (max-width: 1024px) {
         h3 {
           font-size: 1rem;

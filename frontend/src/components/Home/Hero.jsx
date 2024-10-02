@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="hero__img"></div>
       <div className="hero__content">
         <div className="hero__content-inner">
-          <h1>Easy Way to Find Your Dream House</h1>
+          <h1>Find Your Dream Home In One Click</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Discover the best properties in your desired location. Start your
+            journey to find the perfect home today.
           </p>
           <div className="hero__content-search">
             <input

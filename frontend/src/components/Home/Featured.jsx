@@ -1,3 +1,5 @@
+import { MdArrowRightAlt } from "react-icons/md";
+
 const Featured = () => {
   return (
     <section className="featured">
@@ -10,7 +12,9 @@ const Featured = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <a href="#">Read More</a>
+          <a href="#">
+            Read More <MdArrowRightAlt size={20} />
+          </a>
         </div>
         <div className="featured__content-item">
           <h3>Modern Design</h3>
@@ -18,7 +22,9 @@ const Featured = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <a href="#">Read More</a>
+          <a href="#">
+            Read More <MdArrowRightAlt size={20} />
+          </a>
         </div>
         <div className="featured__content-item">
           <h3>Best Price Guarantee</h3>
@@ -26,7 +32,9 @@ const Featured = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <a href="#">Read More</a>
+          <a href="#">
+            Read More <MdArrowRightAlt size={20} />
+          </a>
         </div>
       </div>
     </section>

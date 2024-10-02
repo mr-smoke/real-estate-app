@@ -7,6 +7,7 @@ import {
   MdLocationOn,
   MdMeetingRoom,
 } from "react-icons/md";
+import Loader from "../components/Loader";
 
 const House = () => {
   const { id } = useParams();
@@ -14,8 +15,12 @@ const House = () => {
     variables: { documentId: id },
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error.message}</p>;
+  if (data.house == null)
+    return (
+      <p style={{ textAlign: "center", fontSize: "2rem" }}>No data found.</p>
+    );
 
   const { house } = data;
 
@@ -23,7 +28,7 @@ const House = () => {
     <main>
       <section className="house">
         <img
-          src={`http://localhost:1337${house.Img.url}`}
+          src={`http://localhost:1337${house.Img?.url}`}
           alt={house.Neighbourhood}
         />
         <h1>{house.Neighbourhood}</h1>

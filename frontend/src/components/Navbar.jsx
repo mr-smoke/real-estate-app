@@ -14,7 +14,11 @@ const Navbar = () => {
     <div className="navbar-container">
       <nav className="navbar">
         <div className="navbar__logo">
-          <h1>Logo</h1>
+          <a href="/">
+            <h1>
+              Logo<span>GO</span>
+            </h1>
+          </a>
         </div>
         <div>
           <div className="navbar__hamburger">

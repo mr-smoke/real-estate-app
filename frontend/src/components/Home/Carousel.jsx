@@ -5,19 +5,21 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import { useQuery } from "@apollo/client";
 import { GET_HOUSES } from "../../graphql/queries/house.query";
+import Loader from "../Loader";
 
 const Carousel = () => {
   const { loading, error, data } = useQuery(GET_HOUSES);
+
   return (
     <section className="carousel">
-      <h2>Featured Properties</h2>
+      <h2>Reach Your House In Few Simple Clicks</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={50}
         slidesPerView="auto"
         pagination={{ clickable: true }}
       >
-        {loading && <p>Loading...</p>}
+        {loading && <Loader />}
         {error && <p>Error: ${error.message}</p>}
         {data?.houses.map((house) => (
           <SwiperSlide key={house.documentId}>
