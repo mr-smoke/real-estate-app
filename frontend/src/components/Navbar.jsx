@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="navbar__logo">
           <a href="/">
             <h1>
-              Logo<span>GO</span>
+              House<span>GO</span>
             </h1>
           </a>
         </div>

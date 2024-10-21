@@ -33,11 +33,11 @@ const Hero = () => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             >
-              <option value="100000">&lt; $10,000</option>
-              <option value="200000">&lt; $20,000</option>
-              <option value="300000">&lt; $30,000</option>
-              <option value="400000">&lt; $40,000</option>
-              <option value="500000">&lt; $50,000</option>
+              <option value="10000">&lt; $10,000</option>
+              <option value="20000">&lt; $20,000</option>
+              <option value="30000">&lt; $30,000</option>
+              <option value="40000">&lt; $40,000</option>
+              <option value="50000">&lt; $50,000</option>
             </select>
             <button onClick={handleSearch}>Search</button>
           </div>
