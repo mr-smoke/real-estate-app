@@ -16,8 +16,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-console.log(import.meta.env.VITE_NODE_ENV);
-
 function App() {
   return (
     <>
