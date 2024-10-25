@@ -11,7 +11,7 @@ import Houses from "./pages/Houses";
 const client = new ApolloClient({
   uri:
     import.meta.env.VITE_NODE_ENV === "development"
-      ? "http://localhost:4000/graphql"
+      ? "http://localhost:1337/graphql"
       : "https://real-estate-app-us29.onrender.com/graphql",
   cache: new InMemoryCache(),
 });
