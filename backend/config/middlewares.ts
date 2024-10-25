@@ -16,8 +16,10 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
-      origin: ['*'],
+      origin: '*', // Gerekirse sadece belirli domainleri buraya yaz
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization'],
+      keepHeadersOnError: true,
     },
   },
   'strapi::poweredBy',
