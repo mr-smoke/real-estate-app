@@ -9,9 +9,14 @@ import House from "./pages/House";
 import Houses from "./pages/Houses";
 
 const client = new ApolloClient({
-  uri: "http://localhost:1337/graphql",
+  uri:
+    import.meta.env.VITE_NODE_ENV === "development"
+      ? "http://localhost:4000/graphql"
+      : "/graphql",
   cache: new InMemoryCache(),
 });
+
+console.log(import.meta.env.VITE_NODE_ENV);
 
 function App() {
   return (
