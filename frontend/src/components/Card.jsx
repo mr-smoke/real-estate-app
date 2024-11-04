@@ -9,7 +9,14 @@ const Card = ({ house }) => {
   return (
     <div className="card">
       <div className="card__image">
-        <img src={`http://localhost:1337${house.Img?.url}`} alt="Card" />
+        {import.meta.env.VITE_NODE_ENV === "development" ? (
+          <img src={`http://localhost:1337${house.Img?.url}`} alt="Card" />
+        ) : (
+          <img
+            src={`https://real-estate-app-us29.onrender.com${house.Img?.url}`}
+            alt="Card"
+          />
+        )}
         {house.categories && <span>{house.categories[0].Category}</span>}
       </div>
       <div className="card__content">
